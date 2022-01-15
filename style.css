@@ -1,0 +1,244 @@
+:root {
+  --headline1: 500 60px/64px "DM Sans", sans-serif;
+  --headline2: 500 40px/48px "DM Sans", sans-serif;
+  --headline3: 400 32px/48px "DM Sans", sans-serif;
+  --headline4: 400 18px/29px "DM Sans", sans-serif;
+  --headline5: 700 18px/29px "Inter", sans-serif;
+  --body: 400 18px/24px "Inter", sans-serif;
+  --navigation: 500 21px/120% "DM Sans", sans-serif;
+  --caption: 400 14px/22px "Inter", sans-serif;
+  --button: 500 18px/24px "Inter", sans-serif;
+  --link: 500 18px/24px "Inter", sans-serif;
+  --logo: 700 36px/24px "Karla", sans-serif;
+  --black: #181717;
+  --gray: #606060;
+  --white: #f3f3f3;
+  --secondary: #2429af;
+  --background: #f4f7f0;
+  --brown: #883f16;
+}
+
+body {
+  background-color: var(--background);
+  padding: 0;
+  margin: 0;
+  color: var(--black);
+}
+.wrapper {
+  width: 90%;
+  max-width: 1120px;
+  margin: auto;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+}
+.logo {
+  font: var(--logo);
+}
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+.nav__item {
+  font: var(--navigation);
+}
+.nav__item a {
+  text-decoration: none;
+  color: var(--black);
+}
+.nav__item a:hover {
+  text-decoration: underline;
+  color: var(--secondary);
+}
+.mainSection {
+  padding: 40px 0 80px;
+  display: flex;
+  gap: 32px;
+}
+.hero__title {
+  font: var(--headline1);
+  margin: 0;
+}
+.hero__text {
+  font: var(--headline3);
+  color: var(--gray);
+}
+.section__title {
+  font: var(--headline2);
+}
+.proyectoCard {
+  display: flex;
+  align-items: center;
+  padding-bottom: 64px;
+  margin-bottom: 80px;
+  border-bottom: 1.5px solid var(--black);
+  gap: 128px;
+}
+.proyectoCard__title {
+  font: var(--headline5);
+  color: var(--black);
+  margin: 0 0 24px;
+}
+.proyectoCard__text {
+  font: var(--caption);
+  color: var(--gray);
+  margin: 0 0 24px;
+}
+.proyectoCard__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+.habilidades {
+  padding-bottom: 24px;
+}
+.habilidades .section__title {
+  margin-bottom: 64px;
+}
+.skillList {
+  list-style: none;
+  padding: 0;
+}
+.skillList__item {
+  margin-bottom: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 800px;
+  gap: 32px;
+}
+.skillList__item h5 {
+  font: 500 18px/120% "Inter";
+  text-decoration: underline;
+  flex: 1 0 256px;
+  max-width: 256px;
+}
+.skillList__item p {
+  font: var(--body);
+}
+.contacto {
+  padding-bottom: 80px;
+}
+.contacto .section__title {
+  max-width: 627px;
+}
+.contacto__email {
+  font: var(--headline3);
+  color: var(--brown);
+  text-decoration: none;
+}
+.button {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--white);
+  font: var(--button);
+  background-color: var(--black);
+  padding: 12px 32px;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+}
+.link {
+  display: inline-block;
+  font: var(--link);
+  color: var(--black);
+}
+.link:hover {
+  color: var(--secondary);
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 40px;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero__image img {
+    width: 336px;
+    height: auto;
+  }
+  .proyectoCard__image img {
+    width: 400px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+  .mainSection {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .hero__title {
+    font: var(--headline2);
+  }
+  .hero__text {
+    font: var(--headline4);
+  }
+  .hero .button {
+    width: 100%;
+  }
+  .hero {
+    order: 2;
+  }
+  .hero__image {
+    order: 1;
+  }
+  .hero__image img {
+    width: 100%;
+  }
+  .proyectoCard {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .proyectoCard__image {
+    order: 1;
+  }
+  .proyectoCard__info {
+    order: 2;
+  }
+  .proyectoCard__image img {
+    width: 100%;
+    height: auto;
+  }
+  .skillList__item {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0;
+    margin-bottom: 40px;
+  }
+  .skillList__item h5 {
+    font: 500 18px/120% "Inter";
+    text-decoration: underline;
+    flex: 0 0 auto;
+    max-width: 256px;
+    margin: 0;
+  }
+  .habilidades .section__title {
+    margin-bottom: 40px;
+  }
+  footer {
+    gap: 64px;
+    flex-direction: column;
+  }
+  footer .logo {
+    align-self: flex-start;
+  }
+  footer .nav {
+    display: flex;
+    align-self: flex-end;
+  }
+}
